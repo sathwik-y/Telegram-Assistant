@@ -3,8 +3,8 @@ from telegram.listener import handle_update
 
 def main():
     client = TDLibClient()
-    print("Telegram listener started")
-
+    print("Telegram listener started. Proceeding to auth")
+    client.login()
     while True:
         event = client.receive()
         if event:
